@@ -5,4 +5,6 @@
   2. Customize default _includes/custom-head.html in your source directory and insert the given code snippet.
 {% endcomment %}
 
-<script src="https://unpkg.com/@globus/sdk/umd/globus.production.js"></script>
+    <script type="module" src="https://unpkg.com/@globus/ui/globus.esm.js"></script>
+    <script nomodule src="https://unpkg.com/@globus/ui/globus.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@globus/ui/globus.css" />
