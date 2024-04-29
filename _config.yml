@@ -1,0 +1,6 @@
+theme: minima
+title: Random Image Repository
+description: An example of how to host research data using existing services.
+show_downloads: false
+header_pages:
+  - /#datasets
