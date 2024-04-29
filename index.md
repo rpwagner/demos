@@ -5,6 +5,9 @@ randomly-generated images.
 
 (The names of the datasets and images are also random.)
 
+
+<globus-auth-context client-id="f42cc8a6-a1f1-4e75-90e1-612febbb9e7f" redirect-uri="https://rpwagner.github.io/demos/" scopes="openid profile email" />
+
 ## Examples
 
 <table>
