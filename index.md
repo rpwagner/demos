@@ -6,7 +6,18 @@ randomly-generated images.
 (The names of the datasets and images are also random.)
 
 
-<globus-auth-context client-id="f42cc8a6-a1f1-4e75-90e1-612febbb9e7f" redirect-uri="https://rpwagner.github.io/demos/" scopes="openid profile email" />
+<globus-auth-context client-id="f42cc8a6-a1f1-4e75-90e1-612febbb9e7f" redirect-uri="https://rpwagner.github.io/demos/" scopes="openid profile email">
+  <gac-authenticated state="false">
+    <p>In order to access this resource, you'll need to login in.</p>
+    <button id="login">Log In</button>
+  </gac-authenticated>
+
+  <gac-authenticated>
+    <p>Thanks for visiting!</p>
+    <button id="logout">Log Out</button>
+  </gac-authenticated>
+
+</globus-auth-context>
 
 ## Examples
 
