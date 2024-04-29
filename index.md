@@ -17,6 +17,18 @@ randomly-generated images.
     <button id="logout">Log Out</button>
   </gac-authenticated>
 
+      <script>
+        document.querySelector("#login").addEventListener("click", () => {
+          const context = document.querySelector("globus-auth-context");
+          context.dispatchEvent(new Event("authenticate"));
+        });
+
+        document.querySelector("#logout").addEventListener("click", () => {
+          const context = document.querySelector("globus-auth-context");
+          context.dispatchEvent(new Event("revoke"));
+        });
+      </script>
+
 </globus-auth-context>
 
 ## Examples
