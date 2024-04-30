@@ -12,6 +12,7 @@ console.log("Loaded body");
 
 function globus_login(){
     auth_manager.login();
+    console.log("Login done");
     document.getElementById("user").innerHTML = "Logged in";
 }
 
