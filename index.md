@@ -5,15 +5,13 @@ randomly-generated images.
 
 (The names of the datasets and images are also random.)
 
+<p id="user">Unknown</p>
 
+<button id="login_button">Login</button>
 
-    <p id="user">Unknown</p>
-
-    <button id="login_button">Login</button>
-
-    <button id="logout_button">Logout</button>
+<button id="logout_button">Logout</button>
     
-    <script src="auth.js"></script>  
+<script src="auth.js"></script>  
 
 
 ## Examples
