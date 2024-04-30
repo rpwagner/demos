@@ -10,7 +10,7 @@ const auth_manager = new globus.authorization.create(auth_config);
 
 console.log("Loaded body");
 
-function globus_login(){
+async function globus_login(){
     auth_manager.login();
     await auth_manager.handleCodeRedirect();
     console.log("Login done");
