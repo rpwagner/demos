@@ -5,34 +5,33 @@ randomly-generated images.
 
 (The names of the datasets and images are also random.)
 
-
-<globus-auth-context client-id="f42cc8a6-a1f1-4e75-90e1-612febbb9e7f" redirect-uri="https://rpwagner.github.io/demos/" scopes="openid profile email https://auth.globus.org/scopes/385d3079-5121-40bc-a52f-055296497631/https">
-  <gac-authenticated state="false">
-    <p>In order to access this resource, you'll need to login in.</p>
-    <button id="login">Log In</button>
-  </gac-authenticated>
-
-  <gac-authenticated>
-    <p>Thanks for visiting!</p>
-    <p id="hack">Name</p>
-    <button id="logout">Log Out</button>
-  </gac-authenticated>
+    <p id="statustext">Status: Logged out</p>
+     <button id="login" onclick="funcLogin()">Log In</button>
+    <button id="logout" onclick="funcLogout()">Log Out</button>
 
       <script>
-        document.querySelector("#login").addEventListener("click", () => {
-          const context = document.querySelector("globus-auth-context");
-          context.dispatchEvent(new Event("authenticate"));
-        });
-	  const myArray = Object.values(state);
-	  document.getElementById("hack").innerHTML = myArray;
 
-        document.querySelector("#logout").addEventListener("click", () => {
-          const context = document.querySelector("globus-auth-context");
-          context.dispatchEvent(new Event("revoke"));
-        });
-      </script>
+          const auth_config = {
+      	  client: 'f42cc8a6-a1f1-4e75-90e1-612febbb9e7f',
+	  redirect: 'https://rpwagner.github.io/demos/',
+ 	  scopes: 'openid profile email https://auth.globus.org/scopes/385d3079-5121-40bc-a52f-055296497631/https'};
 
-</globus-auth-context>
+	  const auth_manager = new globus.authorization.create(auth_config);
+
+	  function funcLogout() {
+	  await auth_manager.revoke();
+	  document.getElementById("statustext").innerHTML = "Status: Logged out"
+	  }
+
+
+
+	  function funcLogin() {
+	  const auth_manager = new globus.authorization.create(auth_config);
+	  document.getElementById("statustext").innerHTML = "Status: Logged in"
+	  }
+
+
+</script>
 
 ## Examples
 
