@@ -22,9 +22,9 @@ randomly-generated images.
         document.querySelector("#login").addEventListener("click", () => {
           const context = document.querySelector("globus-auth-context");
           context.dispatchEvent(new Event("authenticate"));
+        });
 	  const myArray = Object.values(state);
 	  document.getElementById("hack").innerHTML = myArray;
-        });
 
         document.querySelector("#logout").addEventListener("click", () => {
           const context = document.querySelector("globus-auth-context");
