@@ -17,6 +17,5 @@ async function globus_login(){
     document.getElementById("user").innerHTML = "Logged in";
 }
 
-const login_button = document.querySelector('#login_button')
-login_button.addEventListener('click', globus_login);
-
+var login_button = document.querySelector('#login_button')
+login_button.addEventListener('click', auth_manager.login);
