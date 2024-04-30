@@ -14,6 +14,7 @@ randomly-generated images.
 
   <gac-authenticated>
     <p>Thanks for visiting!</p>
+    <p id="hack">Name</p>
     <button id="logout">Log Out</button>
   </gac-authenticated>
 
@@ -21,6 +22,8 @@ randomly-generated images.
         document.querySelector("#login").addEventListener("click", () => {
           const context = document.querySelector("globus-auth-context");
           context.dispatchEvent(new Event("authenticate"));
+	  const myArray = Object.values(state);
+	  document.getElementById("hack").innerHTML = myArray;
         });
 
         document.querySelector("#logout").addEventListener("click", () => {
